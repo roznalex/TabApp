@@ -1,0 +1,18 @@
+<nav style="position: relative" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">Tabs</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+            <ul class="nav navbar-nav">
+                <li ng-class='{active: tab === activeTab}' ng-repeat="tab in data | orderBy: 'order'">
+                    <a href='#/tabs/{{tab.id}}'> {{tab.title}} </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div ng-include="path">
+</div>
